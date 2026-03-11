@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unit Converter</title>
+<style>
+body{
+    font-family: Arial;
+    text-align:center;
+    margin-top:50px;
+}
+input, select, button{
+    padding:8px;
+    margin:5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Unit Converter</h2>
+
+<input type="number" id="value" placeholder="Enter value">
+
+<select id="from">
+    <option value="m">Meter</option>
+    <option value="km">Kilometer</option>
+    <option value="cm">Centimeter</option>
+</select>
+
+<select id="to">
+    <option value="m">Meter</option>
+    <option value="km">Kilometer</option>
+    <option value="cm">Centimeter</option>
+</select>
+
+<button onclick="convert()">Convert</button>
+
+<h3 id="result"></h3>
+
+<script>
+function convert(){
+
+let value = document.getElementById("value").value;
+let from = document.getElementById("from").value;
+let to = document.getElementById("to").value;
+
+let meters;
+
+if(from == "m") meters = value;
+if(from == "km") meters = value * 1000;
+if(from == "cm") meters = value / 100;
+
+let result;
+
+if(to == "m") result = meters;
+if(to == "km") result = meters / 1000;
+if(to == "cm") result = meters * 100;
+
+document.getElementById("result").innerHTML = "Result: " + result + " " + to;
+
+}
+</script>
+
+</body>
+</html>
