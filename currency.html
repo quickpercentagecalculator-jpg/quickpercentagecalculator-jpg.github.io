@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Currency Converter</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:40px;">
+
+<h1>Currency Converter</h1>
+
+<input id="usd" placeholder="USD Amount"><br><br>
+
+<button onclick="calc()">Convert</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function calc(){
+
+let usd=document.getElementById("usd").value;
+
+let inr=usd*83;
+
+document.getElementById("result").innerHTML=
+"INR = "+inr;
+
+}
+
+</script>
+
+</body>
+</html>
