@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compound Interest Calculator</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:40px;">
+
+<h1>Compound Interest Calculator</h1>
+
+<input id="p" placeholder="Principal Amount"><br><br>
+<input id="r" placeholder="Rate (%)"><br><br>
+<input id="t" placeholder="Time (Years)"><br><br>
+
+<button onclick="calc()">Calculate</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function calc(){
+
+let p=parseFloat(document.getElementById("p").value);
+let r=parseFloat(document.getElementById("r").value)/100;
+let t=parseFloat(document.getElementById("t").value);
+
+let amount=p*Math.pow((1+r),t);
+
+document.getElementById("result").innerHTML=
+"Total Amount = "+amount.toFixed(2);
+
+}
+
+</script>
+
+</body>
+</html>
