@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profit Calculator</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:40px;">
+
+<h1>Profit Calculator</h1>
+
+<input id="cost" placeholder="Cost Price"><br><br>
+<input id="sell" placeholder="Selling Price"><br><br>
+
+<button onclick="calc()">Calculate</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function calc(){
+
+let cost=document.getElementById("cost").value;
+let sell=document.getElementById("sell").value;
+
+let profit=sell-cost;
+
+document.getElementById("result").innerHTML=
+"Profit = "+profit;
+
+}
+
+</script>
+
+</body>
+</html>
