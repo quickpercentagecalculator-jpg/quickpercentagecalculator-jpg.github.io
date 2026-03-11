@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Percentage Calculator</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+background:#f4f4f4;
+padding:40px;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:10px;
+width:300px;
+margin:auto;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+input{
+padding:10px;
+margin:10px;
+width:80%;
+}
+
+button{
+padding:10px 20px;
+background:#2c3e50;
+color:white;
+border:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Percentage Calculator</h1>
+
+<div class="box">
+
+<input id="total" type="number" placeholder="Total Number">
+
+<input id="percent" type="number" placeholder="Percentage">
+
+<br>
+
+<button onclick="calc()">Calculate</button>
+
+<h3 id="result"></h3>
+
+</div>
+
+<script>
+
+function calc(){
+
+let total=document.getElementById("total").value;
+
+let percent=document.getElementById("percent").value;
+
+let answer=(percent/100)*total;
+
+document.getElementById("result").innerHTML=
+"Result = "+answer;
+
+}
+
+</script>
+
+</body>
+</html>
