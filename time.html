@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Time Calculator</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:40px;">
+
+<h1>Time Calculator</h1>
+
+<input id="hours" placeholder="Hours"><br><br>
+
+<button onclick="calc()">Convert</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function calc(){
+
+let h=document.getElementById("hours").value;
+
+let minutes=h*60;
+
+document.getElementById("result").innerHTML=
+minutes+" Minutes";
+
+}
+
+</script>
+
+</body>
+</html>
