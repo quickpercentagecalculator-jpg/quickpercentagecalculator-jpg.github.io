@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Difference Calculator</title>
+</head>
+
+<body style="font-family:Arial;text-align:center;padding:40px;">
+
+<h1>Date Difference</h1>
+
+<input type="date" id="d1"><br><br>
+<input type="date" id="d2"><br><br>
+
+<button onclick="calc()">Calculate</button>
+
+<h2 id="result"></h2>
+
+<script>
+
+function calc(){
+
+let d1=new Date(document.getElementById("d1").value);
+let d2=new Date(document.getElementById("d2").value);
+
+let diff=(d2-d1)/(1000*60*60*24);
+
+document.getElementById("result").innerHTML=
+diff+" Days";
+
+}
+
+</script>
+
+</body>
+</html>
